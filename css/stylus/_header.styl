@@ -1,0 +1,57 @@
+/* Header
+ * ------------------------
+ */
+// Navbar
+.navbar__wrapper
+    background-color $first-color
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 999
+
+    // Nav body
+    .navbar-nav
+        margin: auto;
+        margin-top: 10px
+
+        & > .nav-item
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            &.active
+                color #fff
+
+            & > .nav-link
+                padding: 0
+                font-size: 15px;
+                font-weight: 600;
+                text-transform: capitalize;
+                color #fff
+                border-bottom-style solid
+                border-bottom-width: 3px;
+                border-bottom-color transparent
+                position: relative;
+                padding-bottom: 10px
+
+                &:before
+                    content ''
+                    width: 100%
+                    position: absolute;
+                    bottom: 0
+                    height: 3px
+                    background-color $second-color
+                    opacity: 0;
+                    margin: auto;
+                    left: 0
+                    right: 0
+
+                &:hover:before
+                    opacity: 1;
+                    transition .2s ease-in-out
+                    animation .3s navbarHover ease-in-out
+
+
+//    border-bottom-color $second-color
+
+// LOGO
+//.navbar__brand

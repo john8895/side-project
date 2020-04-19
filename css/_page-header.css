@@ -1,0 +1,10 @@
+/* Header
+ * ------------------------
+ */
+.navbar__wrapper {
+  background-color: #2862fe;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}

@@ -1,0 +1,27 @@
+.page__index {
+  font-family: "Microsoft JhengHei";
+}
+
+.sideproject__wrapper h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.portfolio-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+.portfolio-box:hover .portfolio-box-detail {
+  display: block;
+}
+.portfolio-box .portfolio-box-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

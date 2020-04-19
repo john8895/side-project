@@ -1,0 +1,14 @@
+//- 首頁產品篩選
+//- -------------------
+mixin index__product-filterItem(titleText,imgUrl,targetlink,tagClass)
+    .col-lg-3(class=tagClass)
+        article.index__sideProjectBox
+            .sideProject-img
+                img.img-fluid(src=imgUrl,
+                        alt=titleText)
+                a(href=targetlink,title=titleText)
+                    .sideProject__meta
+                        .sideProject__meta-title
+                            .btn.btn-info.btn-pill 賞閱作品
+        a(href=targetlink,title=titleText)
+            .sideProject__name=titleText

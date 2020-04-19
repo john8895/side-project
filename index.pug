@@ -1,0 +1,251 @@
+extends include/_layout
+include include/_mixins
+block content
+    main.page__index
+        section.index__section.slide
+            .banner__slide__wrap
+                .banner__img(style='')
+                .banner__caption
+                    .container
+                        .brand
+                            i.fab.fa-github-alt.fa-10x
+                        .subTitle 陳政翰〔阿翰〕的部落格
+                        .title Welcome to TaiwanJohn blog
+                        p
+                            | 台灣匠 (Taiwan John)是一位多才多藝的電腦工程師、設計師及兼職作家，同時也是一個好老公及好爸爸。
+                        .banner__btn
+                            a.btn.btn-sm.btn-warning(href='side-project.html') Side Project
+                //img(src='http://fakeimg.pl/1920x800',alt='')
+        section.index__section.index__ab
+            .container
+                .row
+                    .col-sm-6
+                        h4.subTitle 前端工程師&emsp;|&emsp;平面設計師
+                        h3.index__section-title.index__ab-title.mb-2 About Me
+                        p.description
+                            | 我是前端工程師，會平面設計也會架 Server 寫程式，同時我還是一名兼職作家，正式出版 2 本書，投身資訊職場十五年，大家都很難想像只有高職農科畢業的我，是如何透過網路自學走到這一步？
+                        a.btn(href='ab.html',title='瞭解更多')
+                            i.fas.fa-long-arrow-alt-right.mr-2
+                            | 瞭解更多
+                    .col-sm-6
+                        img.index__ab-image(src='img/index__ab.jpg',alt='')
+        section.index__section.sideProject
+            .sideproject__wrapper
+                .container
+                    .row
+                        .col-sm-12
+                            .header
+                                h3.index__section-title Side Project
+                                .index__section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cum cumque debitis dignissimos eos fugit iusto maxime modi nobis, odio, odit porro reiciendis repellendus sequi sit sunt tempora tempore!
+                .clearfix.mt-3
+                section.sideProject__list-wrap
+                    .container
+                        .row
+                            .col-lg-12
+                                ul.portfolioFilter-menu
+                                    li.filter-item
+                                        a.current.waves-effect.waves-success(href='#', data-filter='*') 所有
+                                    li.filter-item
+                                        a.waves-effect.waves-success(href='#', data-filter='.ajax') 資料串接
+                                    li.filter-item
+                                        a.waves-effect.waves-success(href='#', data-filter='.tools') 網頁工具
+                                    li.filter-item
+                                        a.waves-effect.waves-success(href='#', data-filter='.ui') UX / UI
+                                    li.filter-item
+                                        a.waves-effect.waves-success(href='#', data-filter='.otherCategory') 其他
+                        .clearfix.mb-3
+                        .port.portfolio-masonry.m-b-30
+                            .portfolioContainer.row
+                                +index__product-filterItem('口罩地圖','img/sp__maskmap.jpg','side-project/maskmap.html','ajax ui')
+                                -for (let i = 1; i <= 11; i++)
+                                    +index__product-filterItem('coming soon','img/sp__comingsoon.jpg','#','ajax ui')
+
+        //-
+        section.index__section.index__bottomHeadLine.index__headLine
+            .container
+                .row
+                    .col-sm-12
+                        h3 想要更瞭解我一點
+                        h1 再花你幾分鐘，往下閱讀…
+                        p.description 我的座右銘是：在有限的時間裡，做最大的努力。
+                        .scrollIcon
+                            img(src='img/mouse_roll.png',alt='')
+        //- 履歷
+        section.index__section.index__resume
+            .container
+                .row
+                    .col-sm-12
+                        h3.index__section-title Resume
+                        .resume__wrapper
+                            .resume__body
+                                header
+                                    .resume__myPhoto
+                                    .resume__myName 陳政翰 ( John )
+                                    .description
+                                        p
+                                            | 邏輯能力強，喜歡發現問題並挑戰找出最佳解決方案
+                                        p
+                                            | 對新技術保持熱誠與求知慾，精益求精
+
+                                        ul.resume__intro
+                                            li 前端工程師
+                                            li 南投人
+                                            li 住台中
+                                            li 0919-778205
+                                            li TaiwanJohn@jgui.tw
+                                        ul.resume__slillCategory
+                                            li 網頁設計
+                                            li 前端工程
+                                            li 平面設計
+                                            li 員林職業農工畢業
+                                main
+                                    .resume__skills
+                                        .skills__headTitle 技術
+                                        .container
+                                            .row
+                                                .col-md-4.col-sm-6.col-xs-12
+                                                    .resume__skills__list-wrap
+                                                        .skill-title 平面設計
+                                                        ul.resume__skills__list
+                                                            li 企業 CI / VI 視覺設計
+                                                            li 企畫設計各種商業行銷促成物
+                                                            li 設計平面稿件、刊品書籍排版
+                                                            li 平面文宣 DM、名片
+                                                            li 平面海報、招牌及各式宣傳品設計
+                                                            li Youtube 影音拍攝剪輯上架
+                                                        .skill-subTitle 使用軟體
+                                                        ul.resume__skills__list
+                                                            li Adobe Photoshop
+                                                            li Adobe Illustrator
+                                                            li Adobe InDesign
+                                                            li Adobe Premiere
+
+                                                .col-md-4.col-sm-6.col-xs-12
+                                                    .resume__skills__list-wrap
+                                                        .skill-title 前端工程
+                                                        ul.resume__skills__list
+                                                            li 以 HTML5、CSS、Bootsrap 依客戶喜愛風格設計 RWD 響應式網站
+                                                            li 使用 SASS、SCSS、LESS、Stylus 及 Pug 等預處理語言加速網站開發
+                                                            li 利用 Webpack、Gulp 改善工作流
+                                                            li 運用 Javascript、JQuery 處理客戶客製需求與改善使用者互動問題
+                                                            li 採用 Git 解決程式碼版本控管問題，以 Github 作為儲存與分享的雲端資料櫃
+                                                            li 善用 Ajax 與 JS 進行 API 串接，篩選數據流並導入前台供使用者檢視與運用
+                                                            li Vue.js (學習中)
+                                                        .skill-subTitle 慣用 IDE & Editor
+                                                        ul.resume__skills__list
+                                                            li JetBrains WebStorm
+                                                            li Visual Studio Code
+
+                                                .col-md-4.col-sm-6.col-xs-12
+                                                    .resume__skills__list-wrap
+                                                        .skill-title 後端維運
+                                                        ul.resume__skills__list
+                                                            li 採用 CentOS 、Fedora、ubuntu、Redhat 從 0 到有架設 Linux
+                                                            li 架設與管理 WWW、FTP、Firewall、DNS、MAIL 等 SERVER
+                                                            li PHP + MySQL
+                                                            li Node.js (學習中)
+                                                            li Python (學習中)
+                                                            li 金流 & 物流串接 (學習中)
+                                                        //-
+                                                            .skill-subTitle 慣用 IDE
+                                                            ul.resume__skills__list
+                                                                li JetBrains PhpStorm
+                                                                li JetBrains PyCharm
+                                main
+                                    .resume__skills
+                                        .skills__headTitle 經歷
+                                        .container
+                                            .row
+                                                .col-sm-12
+                                                    //-BLOCK
+                                                    .resume__experience
+                                                        ul.companyInfo
+                                                            li 首岳資訊股份有限公司
+                                                            li 網頁設計師
+                                                            li Jun 2019 - Now
+                                                        ul.workInfo
+                                                            li 客製化 RWD 網頁設計
+                                                            li 公司 CI / VI 企業識別視覺設計
+                                                            li 企業宣傳品商業促成物設計
+                                                    //-BLOCK
+                                                    .resume__experience
+                                                        ul.companyInfo
+                                                            li 好點子工作室
+                                                            li 設計總監
+                                                            li Oct 2014 - Dec 2019
+                                                        ul.workInfo
+                                                            li PHP 開店平台程式開發與設計
+                                                            li 協助超過 100 個中小企業架設專屬網頁，輔導 E 化與網路行銷、社群經營
+                                                            li 平面文宣、名片、海報、招牌及各式店家宣傳品設計
+                                                            li FB 臉書社群網路經營、與客人深度互動
+                                                            li 協助客戶規劃中文網址與輔導使用中文網域名稱
+                                                            li 推廣網站業務與網路行銷
+                                                            li 客戶電腦使用障礙排除與教學
+                                                            li 線上影音教學影片錄製、錄音與剪輯後製
+                                                            li 商業影片剪輯與特效製作
+                                                    //-BLOCK
+                                                    .resume__experience
+                                                        ul.companyInfo
+                                                            li 部落格工作室
+                                                            li 美編企劃
+                                                            li Jan 2011 - Jul 2017
+                                                        ul.workInfo
+                                                            li 經營與管理網路賣場（Yahoo、露天、樂天、PCHome 商店街）、自行架設PHP 電子商務平台，負責版面設計、BANNER、促成物及程式。
+                                                            li FB、IG、Discuz 網路社群經營
+                                                            li 一定瘦健康養身粉絲團  創辦人
+                                                            li 平面印刷促成物設計，如名片、海報、DM、招牌等各式文宣，以及廣告招牌、大圖輸出、各類貼紙、貼標，並協助至印刷廠督印。
+                                                            li 舉辦各類型讀者聚會，自會前場勘、現場互動、攝影至會後舉辦分享會、社群互動等全都一手包辦。
+                                                            li 商品攝影與後製編修
+                                                            li 銷售現場服務人員，協助商品解說、介紹與導覽
+                                                    //-BLOCK
+                                                    .resume__experience
+                                                        ul.companyInfo
+                                                            li 今網資訊科技股份有限公司
+                                                            li 美編企劃專員
+                                                            li Mar 2007 - Sep 2009
+                                                        ul.workInfo
+                                                            li 文案企畫與印前設計
+                                                            li 企畫設計海報、網頁、DM 及各種商業行銷促成物。
+                                                            li 規劃設計公司整體企業形象識別（CI）
+                                                            li 專案工作流程調度與處理。
+                                                            li 設計圖稿、平面刊品排版。
+                                                            li 接洽廠商進行詢價、比價之事宜。
+                                                            li 社區活動企畫、展場規劃與設計。
+                                                            li 電腦專任講師，負責教導社區電腦入門、OFFICE 軟體操作，規劃與製作課程內容。
+                                                            li 電話客戶服務，協助社區民眾排除上網問題。
+                                                    //-BLOCK
+                                                    .resume__experience
+                                                        ul.companyInfo
+                                                            li 領袖數位科技有限公司
+                                                            li 網頁設計師
+                                                            li Mar 2006 - Dec 2006
+                                                        ul.workInfo
+                                                            li 公司網站管理與維護，協助中小企業設計網頁
+                                                            li 大千電台購物網上架、管理與客服處理
+                                                            li 平面海報、促成物之設計與行銷
+                                                            li 商品攝影與後製編修
+                                                            li Linux 伺服器管理，Mail  Server 管理維護與障礙排除
+
+
+        //- 聯絡我
+            section.index__section.index__contact
+                .container
+                    .row
+                        .col-sm-12
+                            header
+                                h3.index__section-title Contact Me
+                                .description 歡迎與我聯絡
+        //- 最後一欄
+        section.index__section.index__bottomHeadLine
+            .container
+                .row
+                    .col-sm-12
+                        h3 感謝您閱覽我的專案作品
+                        h1 意見交流或資訊分享，請與我聯絡
+                        .index__bottomHeadLine__contactInfo
+                            ul
+                                li
+                                    | 電話 / LINE：
+                                    a(href='tel:0919778205',title='Call Me')
+                                        |0919-778205
+                                li paiching01@gmail.com

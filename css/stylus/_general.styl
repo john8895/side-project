@@ -1,0 +1,39 @@
+/* General
+ * ------------------------
+ */
+body
+    font-family: "Microsoft JhengHei";
+    color #3b3d42
+
+a
+    color $first-color
+
+    &:hover
+        color darken($first-color, 10%)
+        text-decoration none
+
+.clearfix
+    clearfix()
+//LOGO
+.brand
+    .brand-text
+        font-family: Verdana;
+        //font-size: 19px;
+/* Animation
+ * ------------------------
+ */
+@keyframes scrollRoll
+    0%
+        transform translateY(0)
+    100%
+        transform translateY(30%)
+@keyframes navbarHover
+    0%
+        width: 0%
+    100%
+        width: 100%
+
+
+/* Page
+ * ------------------------
+ */

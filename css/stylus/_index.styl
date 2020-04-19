@@ -1,0 +1,442 @@
+/* Index
+ * ------------------------
+ */
+.index__section:not(.slide)
+    padding: 70px 0
+
+// 區塊標題
+.index__section-title
+    text-align: center
+    font-size: 36px
+    line-height: 2
+    margin-bottom: 10px
+    font-weight: 400;
+    color $masterTitle
+    text-transform uppercase
+
+    &:before
+        content ''
+        border-top 3px solid #00C1FF
+        position: absolute;
+        top: 0
+        width: 30px
+        margin: auto
+        display inline-block
+        left: 0
+        right: 0
+
+.index__section__description
+    font-size: 15px
+
+
+/* About 首頁 關於我
+ * ------------------------
+ */
+.index__ab
+
+    .subTitle
+        font-size: 17px
+
+    .index__ab-title
+        text-align: left;
+        font-size: 29px
+        display: inline-block;
+        position: relative;
+
+        &:before
+            top: -35px;
+            margin inherit
+
+    .description
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.9;
+
+    // 按鈕
+
+    .btn
+        border-radius 10em
+        padding 5px 25px
+        border 2px solid $second-color
+        background-color transparent
+        font-size: 14px
+        color $second-color
+
+        &:hover
+            background-color #00C1FF
+            color #fff
+
+    .index__ab-image
+        border-radius: 0 15px 15px 0;
+
+
+/* Side Project 專案
+ * ------------------------
+ */
+.sideProject
+    header
+        margin-bottom: 20px
+
+    .index__section__description
+        margin-bottom: 20px
+
+// Side Project body
+.sideProject__list-wrap
+
+    //專案選單
+    .portfolioFilter-menu
+        margin-bottom: 30px
+        jh-flex()
+        justify-content center
+
+        .filter-item
+            font-size: 14px
+
+            &:not(:last-child)
+                margin-right: 10px
+
+            a
+                padding: 5px 9px;
+                border: 1px solid #e1e1e1;
+                border-radius: 5px;
+
+                &.current
+                &:hover
+                    background-color $masterTitle
+                    color #fff
+
+    //專案方塊
+    //---------------------------
+    article.index__sideProjectBox
+        cursor pointer
+        //+breakpoint(md)
+
+        .sideProject-img
+            position: relative;
+            box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.19);
+
+        //遮罩
+        .sideProject__meta
+            position: absolute;
+            opacity: 0;
+            bottom: 0
+            background-color rgba(247, 247, 247, 0.41)
+            display: table;
+            width: 100%;
+            height: 100%;
+
+            //遮罩文字
+            .sideProject__meta-title
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                padding-top: 110px;
+                color: #fff;
+
+                .btn
+                    background-color $masterTitle
+                    font-size: 14px
+                    border 0
+                    transition .3s ease-in-out
+
+                    &:hover
+                        background-color #FEF619
+                        color #000
+                        transition .3s ease-in-out
+
+        &:hover
+            .sideProject__meta
+                opacity: 1;
+                transition .2s linear .1s
+
+    //專案名稱
+    .sideProject__name
+        text-align: center;
+        color #343434
+        padding: 10px 0 30px;
+        font-size: 13px
+        text-transform uppercase
+        font-weight: bold;
+
+
+/* Resume 履歷
+ * ------------------------
+ */
+.index__resume
+    //簡述
+    .description
+        margin: auto;
+        font-size: 17px
+        margin-bottom: 20px
+
+
+//履歷
+.resume__wrapper
+    .resume__body
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        border-radius: 2px;
+        max-width: 100%;
+        background: #fff;
+        padding: .4472in;
+
+        //照片
+        .resume__myPhoto
+            background-image: url(../img/index__myphoto.jpg);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 140%;
+            padding: 5px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            margin-bottom: 20px
+
+        //姓名
+        .resume__myName
+            font-weight: bold;
+            font-size: 23px
+            text-align: center;
+            margin-bottom: 20px
+
+        //簡單描述
+        .description
+            text-align: center;
+            margin-bottom: 30px
+
+            p
+                margin-bottom: 10px
+
+        //簡述
+        .resume__intro
+            font-size: 19px
+            margin-bottom: 12px
+            margin-top: 30px
+            jh-flex()
+            justify-content center
+
+            li
+                &:not(:last-child)
+                &:not(:first-child):before
+                    margin-right: 10px
+                    font-weight: 400;
+
+                &:not(:first-child):before
+                    content '·'
+
+        .resume__slillCategory
+            jh-flex()
+            justify-content center
+
+            li
+                &:not(:last-child)
+                &:not(:first-child):before
+                    margin-right: 14px
+                    font-weight: 400;
+
+                &:not(:first-child):before
+                    content '|'
+
+        //技術分類
+        .resume__slillCategory
+            font-size: 19px
+
+//技術
+//---------------------------
+.resume__skills
+
+    //技能 Master Title
+    .skills__headTitle
+        font-size: 29px
+        font-weight: bold;
+        margin-bottom: 16px
+        padding-left: 10px
+
+    // List Wrap
+    .resume__skills__list-wrap
+        border-top: 1px solid #ddd;
+        padding: 20px 0;
+
+        // Title
+        .skill-title
+            font-size: 20px
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 18px
+
+        // sub Title
+        .skill-subTitle
+            font-size: 15px
+            margin-top: 20px
+
+    // List
+    ul.resume__skills__list
+        li
+            line-height: 1.7
+            font-size: 14px
+
+            &:before
+                content '-'
+                margin-right: 5px;
+                padding-left: 7px;
+
+//- 經歷
+//---------------------------
+.resume__skills
+
+    .resume__experience
+        padding-left: 20px
+
+        //- 公司與職位
+        //---------------------------
+        ul.companyInfo
+            position: relative;
+            padding-left: 50px
+            jh-flex()
+
+            //圓點
+            &:before
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 4px;
+                border: 3px solid #ccc;
+                padding: 6px;
+                z-index: 1;
+            //直線
+            &:after
+                content: '';
+                position: absolute;
+                left: 9px;
+                bottom: -40px;
+                height: 100%;
+                border-left: 1px solid #ccc;
+                transform: translateY(87px);
+
+            li
+                margin-right: 5px
+                font-size: 18px
+                font-weight: 600;
+
+                &:not(:first-child):before
+                    content ','
+                    margin-right: 10px
+
+        //- 工作內容
+        //---------------------------
+        ul.workInfo
+            padding-left: 60px
+            position: relative;
+            padding-bottom: 20px
+            padding-top: 5px
+
+            //直線
+            &:before
+                content: '';
+                position: absolute;
+                left: 9px;
+                top: 0;
+                height: 130%;
+                border-left: 1px solid #ccc;
+                transform: translateY(-5px);
+
+            li
+                line-height: 1.9
+
+                &:before
+                    fontAwesome-icon('\f105','Font Awesome 5 Free')
+                    margin-right: 10px
+                    color #ccc
+                    font-size: 15px;
+                    vertical-align: baseline;
+        //最後一個
+        &:last-child
+            ul.workInfo
+                //直線
+                &:before
+                    height: 92%;
+                    transform: translateY(0);
+
+
+/* index bottom HeadLine
+ * ------------------------
+ */
+.index__bottomHeadLine
+    padding: 95px 0 86px 0
+    //background-color darken($first-color,10%)
+    background-color $first-color
+    color #fff
+    text-align: center;
+
+    h3
+        font-size: 25px
+        font-family: $MS-Jh;
+
+    h1
+        font-size: 35px
+        line-height: 2.3
+        font-weight: bold;
+
+    .description
+        font-size: 15px
+        color #cacaca
+
+    //游標動畫
+    .scrollIcon
+        margin-top: 25px
+        animation 2s ease-in-out scrollRoll infinite forwards alternate
+        img
+            width: 22px
+            color #fff
+
+
+/* Headline 橫福標題
+ * ------------------------
+ */
+.index__headLine
+    .description
+        font-size: 17px
+        color #dadada
+
+
+//- 首頁 聯絡我
+//---------------------------
+//.index__contact
+//    background-color #F8F9FD
+//
+//    header
+//        .description
+//            text-align: center;
+//            font-size: 18px
+
+.index__bottomHeadLine__contactInfo
+    ul
+        jh-flex()
+        justify-content center
+
+        li
+            color #ccc
+            padding-left: .8rem
+            padding-right: .8rem
+            transition .3s linear
+            border-radius 10px
+
+            &:not(:last-child)
+                margin-right: 20px
+
+            &:hover
+                background-color #fff
+                color $first-color
+                cursor pointer
+                transition .3s linear
+
+            a
+                color #ccc
+
+                &:hover
+                    color #000
+
