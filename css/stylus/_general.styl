@@ -14,11 +14,13 @@ a
 
 .clearfix
     clearfix()
+
 //LOGO
 .brand
     .brand-text
         font-family: Verdana;
-        //font-size: 19px;
+
+//font-size: 19px;
 /* Animation
  * ------------------------
  */
@@ -27,6 +29,7 @@ a
         transform translateY(0)
     100%
         transform translateY(30%)
+
 @keyframes navbarHover
     0%
         width: 0%
@@ -37,3 +40,166 @@ a
 /* Page
  * ------------------------
  */
+.page__main
+    margin-top: 60px
+
+.page__section
+    margin: 80px 0 90px;;
+
+/* 麵包屑
+ * ------------------------
+ */
+.breadcrumb-wrap
+    padding: 40px 0 60px;
+    background-color #efefef
+    border-bottom: 1px solid #ddd;
+
+
+h1.breadcrumb__pageTitle
+    font-size: 25px
+
+
+.jh-breadcrumb {
+    background-color: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    padding: 8px 15px 8px 0;
+
+    ol {
+        list-style-type: none;
+        display: flex;
+        display: -ms-flex;
+        justify-content: flex-end;
+    }
+
+    li {
+        font-size: 15px;
+        color: #c7c7c7;
+
+        a {
+            font-weight: 500;
+            color: #353535;
+
+            &:hover {
+                color: #7fb42a;
+                text-decoration: underline;
+            }
+        }
+
+        &:first-child:before {
+            fontAwesome-icon('\f965','Font Awesome 5 Free')
+            margin-right: 10px;
+            color: #7eb32a;
+        }
+
+        &:not(:last-child):after {
+            fontAwesome-icon('/')
+            padding-right: 7px;
+            padding-left: 7px;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        &:last-child {
+            color: #353535;
+        }
+
+        .acitve {
+            color: #6c757d;
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .jh-breadcrumb ol {
+        flex-wrap: wrap;
+    }
+}
+
+.jh-pagination-wraper {
+    width: auto;
+    margin: auto;
+}
+
+@media all and (min-width: 320px) {
+    .jh-pagination-wraper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .jh-pagination-wraper {
+        display: inline-block;
+    }
+}
+
+/* 分頁
+ * ------------------------
+ */
+.pagination {
+    float: left;
+    display: block;
+    vertical-align: middle;
+
+    .pagination-numbers {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-left: 0;
+        text-align: right;
+        width: 100%;
+    }
+}
+
+.pagination-numbers, ul.pagination-numbers {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+    text-align: right;
+    width: 100%;
+}
+
+.pagination-numbers li {
+    display: inline-block;
+    float: left;
+    list-style: outside none none;
+    margin-bottom: 0;
+    padding: 0 3px;
+
+    a {
+        border: 1px solid;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        font-size: 12px;
+        font-weight: 400;
+        height: 34px;
+        line-height: 33px;
+        padding: 0 12px;
+        transition: all .2s linear 0s;
+        -moz-transition: all .2s linear 0s;
+        -o-transition: all .2s linear 0s;
+        -webkit-transition: all .2s linear 0s;
+        color: #282828;
+        background-color: #fff;
+
+        &:hover {
+            color: #505050;
+            background-color: #f1f1f1;
+            border-color: #d7d7d7;
+        }
+
+        &.active {
+            color: #fff;
+            background-color: #7fb42a;
+        }
+    }
+}

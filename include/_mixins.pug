@@ -12,3 +12,9 @@ mixin index__product-filterItem(titleText,imgUrl,targetlink,tagClass)
                             .btn.btn-info.btn-pill 賞閱作品
         a(href=targetlink,title=titleText)
             .sideProject__name=titleText
+//- Side Project
+//- -------------------
+mixin project__image-item(imgUrl,textTitle)
+    .col-md-3
+        .project-image
+            img(src=imgUrl,alt=textTitle)
