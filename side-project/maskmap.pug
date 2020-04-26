@@ -1,5 +1,6 @@
 extends ../include/_layout
 block var
+    -fileRootPath = '../'
 block head
     include ../include/_head-inner
 block content
@@ -46,7 +47,7 @@ block content
 
                 .row.project-image-wrap
                     -for(let i=1;i<=8;i++)
-                        +project__image-item('img/255x193.png','')
+                        +project__image-item('../img/255x193.png','')
                 .row
                     .col-sm-12
                         .project-experience

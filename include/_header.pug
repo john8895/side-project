@@ -1,34 +1,33 @@
-header
-    //- Navbar
-    .navbar__wrapper.navbar-inner.sticky-menu
-        .container
-            nav.navbar.navbar-expand-lg.navbar-dark
-                a.navbar__brand.navbar-brand(href='index.html')
-                    .brand.text-uppercase
-                        i.fab.fa-github-alt.fa-lg.mr-2
-                        span.brand-text
-                            | TaiwanJohn
-                button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
-                    span.navbar-toggler-icon
-                #navbarNavDropdown.collapse.navbar-collapse
-                    ul.navbar-nav
-                        li.nav-item.active
-                            a.nav-link(href='index.html',title='Home')
-                                | Home
-                                span.sr-only (current)
-                        li.nav-item
-                            a.nav-link(href='ab.html',title='About') About
-                        li.nav-item
-                            a.nav-link(href='side-project.html',title='Side Project') Side Project
-                        li.nav-item
-                            a.nav-link(href='blog.html',title='Blog') Blog
-                        li.nav-item
-                            a.nav-link(href='contact.html',title='Contact') Contact
-                        //-
-                            li.nav-item.dropdown
-                                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                                    | Dropdown link
-                                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                                    a.dropdown-item(href='#') Action
-                                    a.dropdown-item(href='#') Another action
-                                    a.dropdown-item(href='#') Something else here
+//- Navbar
+.navbar__wrapper.navbar-inner.sticky-menu
+    .container
+        nav.navbar.navbar-expand-lg.navbar-dark
+            a.navbar__brand.navbar-brand(href=fileRootPath+'index.html')
+                .brand.text-uppercase
+                    i.fab.fa-github-alt.fa-lg.mr-2
+                    span.brand-text
+                        | TaiwanJohn
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNavDropdown.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href=fileRootPath+'index.html',title='Home')
+                            | Home
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href=fileRootPath+'ab.html',title='About') About
+                    li.nav-item
+                        a.nav-link(href=fileRootPath+'side-project.html',title='Side Project') Side Project
+                    li.nav-item
+                        a.nav-link(href=fileRootPath+'blog.html',title='Blog') Blog
+                    li.nav-item
+                        a.nav-link(href=fileRootPath+'contact.html',title='Contact') Contact
+                    //-
+                        li.nav-item.dropdown
+                            a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                | Dropdown link
+                            .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                                a.dropdown-item(href='#') Action
+                                a.dropdown-item(href='#') Another action
+                                a.dropdown-item(href='#') Something else here

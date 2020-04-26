@@ -47,7 +47,7 @@ block content
                                     li.filter-item
                                         a.waves-effect.waves-success(href='#', data-filter='.ajax') 資料串接
                                     li.filter-item
-                                        a.waves-effect.waves-success(href='#', data-filter='.web-component') 網頁工具
+                                        a.waves-effect.waves-success(href='#', data-filter='.web-tools') 網頁工具
                                     li.filter-item
                                         a.waves-effect.waves-success(href='#', data-filter='.ui') UX / UI
                                     li.filter-item
@@ -56,7 +56,8 @@ block content
                         .port.portfolio-masonry.m-b-30
                             .portfolioContainer.row
                                 +index__product-filterItem('口罩地圖','img/sp__maskmap.jpg','side-project/maskmap.html','ajax ui')
-                                +index__product-filterItem('中西曆年號查詢對照表','img/sp__chinese-western-years-map.jpg','chinese-western-years-map.html','web-component')
+                                +index__product-filterItem('中西曆年號查詢對照表','img/sp__chinese-western-years-map.jpg','side-project/chinese-western-years-map.html','web-tools')
+                                +index__product-filterItem('訂便當系統','img/sp__chinese-western-years-map.jpg','side-project/order-meal-system.html','web-tools')
                                 -for (let i = 1; i <= 6; i++)
                                     +index__product-filterItem('coming soon','img/sp__comingsoon.jpg','#','ajax ui')
 
