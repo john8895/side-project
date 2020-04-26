@@ -47,7 +47,7 @@ block content
                                     li.filter-item
                                         a.waves-effect.waves-success(href='#', data-filter='.ajax') 資料串接
                                     li.filter-item
-                                        a.waves-effect.waves-success(href='#', data-filter='.tools') 網頁工具
+                                        a.waves-effect.waves-success(href='#', data-filter='.web-component') 網頁工具
                                     li.filter-item
                                         a.waves-effect.waves-success(href='#', data-filter='.ui') UX / UI
                                     li.filter-item
@@ -56,7 +56,8 @@ block content
                         .port.portfolio-masonry.m-b-30
                             .portfolioContainer.row
                                 +index__product-filterItem('口罩地圖','img/sp__maskmap.jpg','maskmap.html','ajax ui')
-                                -for (let i = 1; i <= 11; i++)
+                                +index__product-filterItem('中西曆年號查詢對照表','img/sp__chinese-western-years-map.jpg','chinese-western-years-map.html','web-component')
+                                -for (let i = 1; i <= 6; i++)
                                     +index__product-filterItem('coming soon','img/sp__comingsoon.jpg','#','ajax ui')
 
         //-

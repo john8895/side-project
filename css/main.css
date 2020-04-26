@@ -768,9 +768,15 @@ ul.pagination-numbers {
   margin-bottom: 20px;
 }
 .sideProject__project .project-detail {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.7;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding: 10px 20px 0;
+}
+.sideProject__project .project-detail ol,
+.sideProject__project .project-detail ul {
+  list-style-type: circle;
+  margin-left: 40px;
 }
 .sideProject__project .project-info ul {
   margin-left: 20px;
@@ -778,9 +784,10 @@ ul.pagination-numbers {
 }
 .sideProject__project .project-info ul li {
   padding-left: 20px;
+  line-height: 1.85;
 }
 .sideProject__project .project-info ul li:before {
-  content: '\101';
+  content: '\f105';
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   -webkit-font-smoothing: antialiased;
@@ -789,9 +796,14 @@ ul.pagination-numbers {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+  margin-right: 7px;
+  color: #c3c3c3;
 }
 .sideProject__project .project-info ul li a {
   color: #2147b1;
+}
+.sideProject__project .project-image-wrap {
+  margin-bottom: 20px;
 }
 .sideProject__project .project-image {
   margin-bottom: 20px;
@@ -799,8 +811,30 @@ ul.pagination-numbers {
 .sideProject__project .project-ref {
   margin-top: 30px;
 }
-.sideProject__project .projectRef-title {
-  font-size: 30px;
+.sideProject__project .project-ref ul li {
+  padding-left: 20px;
+  line-height: 1.85;
+}
+.sideProject__project .project-ref ul li:before {
+  content: '\f105';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  margin-right: 7px;
+  color: #c3c3c3;
+}
+.sideProject__project .projectRef-title,
+.sideProject__project .projectExp-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+.sideProject__project .project-experience {
+  margin-bottom: 20px;
 }
 .footer {
   position: relative;
