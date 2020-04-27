@@ -16,13 +16,14 @@
                             | Home
                             span.sr-only (current)
                     li.nav-item
-                        a.nav-link(href=fileRootPath+'ab.html',title='About') About
+                        a.nav-link.animate__innerLink(href=fileRootPath+'index.html#index__resume',title='Resume') Resume
                     li.nav-item
-                        a.nav-link(href=fileRootPath+'side-project.html',title='Side Project') Side Project
+                        a.nav-link.animate__innerLink(href=fileRootPath+'index.html#index__sideProject',title='Side Project') Side Project
+                    //-
+                        li.nav-item
+                            a.nav-link(href=fileRootPath+'blog.html',title='Blog') Blog
                     li.nav-item
-                        a.nav-link(href=fileRootPath+'blog.html',title='Blog') Blog
-                    li.nav-item
-                        a.nav-link(href=fileRootPath+'contact.html',title='Contact') Contact
+                        a.nav-link.animate__innerLink(href=fileRootPath+'index.html#index__contact',title='Contact') Contact
                     //-
                         li.nav-item.dropdown
                             a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')

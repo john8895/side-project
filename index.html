@@ -6,24 +6,21 @@
     <title>台灣匠的部落格 | 陳政翰 ( John )'s Resume</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <!-- -var path='index'-->
-    <!-- -var path='page'-->
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
     <header class="page__index">
       <div class="navbar__wrapper navbar-inner sticky-menu">
         <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-dark"><a class="navbar__brand navbar-brand" href="undefinedindex.html">
+          <nav class="navbar navbar-expand-lg navbar-dark"><a class="navbar__brand navbar-brand" href="index.html">
               <div class="brand text-uppercase"><i class="fab fa-github-alt fa-lg mr-2"></i><span class="brand-text">TaiwanJohn</span></div></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link" href="undefinedindex.html" title="Home">Home<span class="sr-only">(current)</span></a></li>
-                <li class="nav-item"><a class="nav-link" href="undefinedab.html" title="About">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="undefinedside-project.html" title="Side Project">Side Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="undefinedblog.html" title="Blog">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="undefinedcontact.html" title="Contact">Contact</a></li>
+                <li class="nav-item active"><a class="nav-link" href="index.html" title="Home">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link animate__innerLink" href="index.html#index__resume" title="Resume">Resume</a></li>
+                <li class="nav-item"><a class="nav-link animate__innerLink" href="index.html#index__sideProject" title="Side Project">Side Project</a></li>
+                <li class="nav-item"><a class="nav-link animate__innerLink" href="index.html#index__contact" title="Contact">Contact</a></li>
               </ul>
             </div>
           </nav>
@@ -40,7 +37,7 @@
               <div class="subTitle">陳政翰〔阿翰〕的部落格</div>
               <div class="title">Welcome to TaiwanJohn blog</div>
               <p>台灣匠 (Taiwan John)是一位多才多藝的電腦工程師、設計師及兼職作家，同時也是一個好老公及好爸爸。</p>
-              <div class="banner__btn"><a class="btn btn-sm btn-warning" href="side-project.html">Side Project</a></div>
+              <div class="banner__btn"><a class="btn btn-sm btn-warning animate__innerLink" href="index.html#index__sideProject">Side Project</a></div>
             </div>
           </div>
           <!--img(src='http://fakeimg.pl/1920x800',alt='')-->
@@ -64,7 +61,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="header">
-                  <h3 class="index__section-title">Side Project</h3>
+                  <h3 class="index__section-title" id="index__sideProject">Side Project</h3>
                   <div class="index__section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cum cumque debitis dignissimos eos fugit iusto maxime modi nobis, odio, odit porro reiciendis repellendus sequi sit sunt tempora tempore!</div>
                 </div>
               </div>
@@ -208,7 +205,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h3 class="index__section-title">Resume</h3>
+              <h3 class="index__section-title" id="index__resume">Resume</h3>
               <div class="resume__wrapper">
                 <div class="resume__body">
                   <header>
@@ -392,7 +389,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h3>感謝您閱覽我的專案作品</h3>
+              <h3 id="index__contact">感謝您閱覽我的專案作品</h3>
               <h1>意見交流或資訊分享，請與我聯絡</h1>
               <div class="index__bottomHeadLine__contactInfo">
                 <ul>
@@ -424,8 +421,9 @@
       </div>
     </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
-    <script type="text/javascript" href="https://use.fontawesome.com/releases/v5.0.0/js/all.js" defer></script>
+    <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.0.0/js/all.js" defer></script>
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script>
       $(window).on('load', function () {
           var $container = $('.portfolioContainer');

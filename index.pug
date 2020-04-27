@@ -1,4 +1,6 @@
 extends include/_layout
+block var
+    -fileRootPath = ''
 block content
     main.page__index
         section.index__section.slide
@@ -13,7 +15,7 @@ block content
                         p
                             | 台灣匠 (Taiwan John)是一位多才多藝的電腦工程師、設計師及兼職作家，同時也是一個好老公及好爸爸。
                         .banner__btn
-                            a.btn.btn-sm.btn-warning(href='side-project.html') Side Project
+                            a.btn.btn-sm.btn-warning.animate__innerLink(href='index.html#index__sideProject') Side Project
                 //img(src='http://fakeimg.pl/1920x800',alt='')
         section.index__section.index__ab
             .container
@@ -34,7 +36,7 @@ block content
                     .row
                         .col-sm-12
                             .header
-                                h3.index__section-title Side Project
+                                h3#index__sideProject.index__section-title Side Project
                                 .index__section__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cum cumque debitis dignissimos eos fugit iusto maxime modi nobis, odio, odit porro reiciendis repellendus sequi sit sunt tempora tempore!
                 .clearfix.mt-3
                 section.sideProject__list-wrap
@@ -76,7 +78,7 @@ block content
             .container
                 .row
                     .col-sm-12
-                        h3.index__section-title Resume
+                        h3#index__resume.index__section-title Resume
                         .resume__wrapper
                             .resume__body
                                 header
@@ -241,7 +243,7 @@ block content
             .container
                 .row
                     .col-sm-12
-                        h3 感謝您閱覽我的專案作品
+                        h3#index__contact 感謝您閱覽我的專案作品
                         h1 意見交流或資訊分享，請與我聯絡
                         .index__bottomHeadLine__contactInfo
                             ul

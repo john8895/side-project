@@ -771,7 +771,11 @@ ul.pagination-numbers {
   font-size: 17px;
   line-height: 1.7;
   margin-bottom: 20px;
-  padding: 10px 20px 0;
+}
+.sideProject__project .project-detail p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.7;
 }
 .sideProject__project .project-detail ol,
 .sideProject__project .project-detail ul {
@@ -781,6 +785,7 @@ ul.pagination-numbers {
 .sideProject__project .project-info ul {
   margin-left: 20px;
   margin-bottom: 30px;
+  font-size: 18px;
 }
 .sideProject__project .project-info ul li {
   padding-left: 20px;
@@ -835,6 +840,11 @@ ul.pagination-numbers {
 }
 .sideProject__project .project-experience {
   margin-bottom: 20px;
+}
+.sideProject__project .project-experience .exp-detail p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 18px;
 }
 .footer {
   position: relative;
