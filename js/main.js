@@ -18,4 +18,43 @@ $(function () {
         }, 800)
         e.preventDefault()
     })
+
+    // lightbox
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'disableScrolling': true,
+        'fadeDuration': 300,
+        'imageFadeDuration': 300,
+        'positionFromTop': 100,
+    })
 })
+
+$(window).on('load', function () {
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+    $('.portfolioFilter-menu > li > a').click(function () {
+        console.log('e');
+
+        $('.portfolioFilter-menu > li .current').removeClass('current');
+        $(this).addClass('current');
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+        return false;
+    });
+
+});

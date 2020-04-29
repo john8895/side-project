@@ -6,6 +6,7 @@
     <title>台灣匠的部落格 | 陳政翰 ( John )'s Resume</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
@@ -402,7 +403,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer"><a id="gotop" href="#" title=""><i class="fas fa-long-arrow-alt-up"></i>TOP</a>
+    <footer class="footer"><a id="gotop" href="#" title=""><i class="fas fa-long-arrow-alt-up"></i><span>TOP</span></a>
       <div class="footer__wrapper">
         <div class="container">
           <div class="row">
@@ -423,36 +424,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
     <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.0.0/js/all.js" defer></script>
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script>
-      $(window).on('load', function () {
-          var $container = $('.portfolioContainer');
-          $container.isotope({
-              filter: '*',
-              animationOptions: {
-                  duration: 750,
-                  easing: 'linear',
-                  queue: false
-              }
-          });
-          $('.portfolioFilter-menu > li > a').click(function () {
-              console.log('e');
-      
-              $('.portfolioFilter-menu > li .current').removeClass('current');
-              $(this).addClass('current');
-              var selector = $(this).attr('data-filter');
-              $container.isotope({
-                  filter: selector,
-                  animationOptions: {
-                      duration: 750,
-                      easing: 'linear',
-                      queue: false
-                  }
-              });
-              return false;
-          });
-      
-      });
-    </script>
   </body>
 </html>

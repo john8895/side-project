@@ -12,9 +12,10 @@ mixin index__product-filterItem(titleText,imgUrl,targetlink,tagClass)
                             .btn.btn-info.btn-pill 賞閱作品
         a(href=targetlink,title=titleText)
             .sideProject__name=titleText
-//- Side Project
+//- Side Project 專案
 //- -------------------
-mixin project__image-item(imgUrl,textTitle)
+mixin project__image-item(imgUrl,textTitle,lightboxTitle)
     .col-md-3
         .project-image
-            img(src=imgUrl,alt=textTitle)
+            a(href=imgUrl,data-lightbox=textTitle, data-title=lightboxTitle)
+                img(src=imgUrl,alt=textTitle)

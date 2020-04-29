@@ -1,17 +1,17 @@
 extends ../include/_layout
 block var
     -fileRootPath = '../'
-    // -var pageTitle = '口罩地圖'
+    -var pageTitle = '口罩地圖'
 block head
     include ../include/_head-inner
 block content
-    main.page__main.page__sideproject__maskmap
+    main.page__main.page__sideproject
         section.breadcrumb-wrap
             .container
                 .row
                     .col-md-6
                         h1.breadcrumb__pageTitle
-                            block pageTitle
+                            =pageTitle
                     // 麵包屑
                     .col-md-6
                         nav.jh-breadcrumb
@@ -20,27 +20,23 @@ block content
                                     a(href='index.html') Home
                                 li
                                     a(href='side-project-list.html') Side Project
-                                li
-                                    block pageTitle
+                                li=pageTitle
         section.page__section.sideProject__project
             .container
                 .row
                     .col-sm-12
-                        block pageContent
-                            .project-title 口罩地圖 Where My Mask?
-                            hr
-                            .project-detail
-                                p 串接健保署的口罩剩餘數量 API，將資料以地圖座標方式呈現，讓使用者可以找到自己附近仍有剩餘口罩的藥局，以便用最短的時間買到口罩。
+                        .project-title=pageTitle
+                        hr
+                        .project-detail
+                            block detail
+                                p 文字
                                 ol
-                                    li 用行政區、城市篩選，即時更新有剩餘庫存的店家列表，並同步座標顯示在地圖上。
-                                    li 可依照所有口罩、成人口罩、兒童口罩，分別篩選功能。
-                                    li 點選尚有庫存店家列表的店家名稱，可以即時定位顯示於地圖上。
-                                    li 點選地圖座標點上的店家地址，可連結至 Google 地圖察看更多資訊或導航。
-                                    li 點選店家電話，可直接撥打電話（手機裝置）。
-                            .project-info
+                                    li 文字
+                        .project-info
+                            block info
                                 ul
                                     li 技術：Pug、SCSS、Javascript、AJAX
-                                    li 製作時間：4 個月
+                                    li 製作時間：
                                     li
                                         | 網址：
                                         a(href='https://john8895.github.io/maskmap/',target='_blank',title='口罩地圖 Where My Mask?') https://john8895.github.io/maskmap/
@@ -50,21 +46,24 @@ block content
                                         a(href='https://github.com/john8895/maskmap',target='_blank',title='口罩地圖 Where My Mask?') https://github.com/john8895/maskmap
 
                 .row.project-image-wrap
-                    -for(let i=1;i<=8;i++)
-                        +project__image-item('../img/255x193.png','')
+                    block images
+                        -for (let i = 1; i <= 8; i++)
+                            +project__image-item('../img/255x193.png','images',pageTitle)
                 .row
                     .col-sm-12
                         .project-experience
                             .projectExp-title 學習心得
                             hr
                             .exp-detail
-                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet commodi cupiditate dolor doloremque eos et iste officiis possimus. Alias assumenda at dignissimos ea eveniet inventore, magnam quod voluptatibus!
+                                block exp-detail
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet commodi cupiditate dolor doloremque eos et iste officiis possimus. Alias assumenda at dignissimos ea eveniet inventore, magnam quod voluptatibus!
                 .row
                     .col-sm-12
                         .project-ref
                             .projectRef-title 參考資料
                             hr
-                            ul
-                                li 參考網站 1
-                                li 參考網站 2
-                                li 參考網站 3
+                            block ref
+                                ul
+                                    li 參考網站 1
+                                    li 參考網站 2
+                                    li 參考網站 3

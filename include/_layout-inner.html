@@ -6,7 +6,7 @@
     <title>台灣匠的部落格 | 陳政翰 ( John )'s Resume</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <!-- -var pageTitle = '口罩地圖'-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
   </head>
   <body>
@@ -28,12 +28,12 @@
         </div>
       </div>
     </header>
-    <main class="page__main page__sideproject__maskmap">
+    <main class="page__main page__sideproject">
       <section class="breadcrumb-wrap">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h1 class="breadcrumb__pageTitle">
+              <h1 class="breadcrumb__pageTitle">口罩地圖
               </h1>
             </div>
             <!-- 麵包屑-->
@@ -42,8 +42,7 @@
                 <ol>
                   <li><a href="index.html">Home</a></li>
                   <li><a href="side-project-list.html">Side Project</a></li>
-                  <li>
-                  </li>
+                  <li>口罩地圖</li>
                 </ol>
               </nav>
             </div>
@@ -54,7 +53,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <div class="project-title">口罩地圖 Where My Mask?</div>
+              <div class="project-title">口罩地圖</div>
               <hr>
               <div class="project-detail">
                 <p>串接健保署的口罩剩餘數量 API，將資料以地圖座標方式呈現，讓使用者可以找到自己附近仍有剩餘口罩的藥局，以便用最短的時間買到口罩。</p>
@@ -78,28 +77,28 @@
           </div>
           <div class="row project-image-wrap">
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
             <div class="col-md-3">
-              <div class="project-image"><img src="../img/255x193.png" alt=""/></div>
+              <div class="project-image"><a href="../img/255x193.png" data-lightbox="" data-title="口罩地圖"><img src="../img/255x193.png" alt=""/></a></div>
             </div>
           </div>
           <div class="row">
@@ -107,7 +106,8 @@
               <div class="project-experience">
                 <div class="projectExp-title">學習心得</div>
                 <hr>
-                <div class="exp-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet commodi cupiditate dolor doloremque eos et iste officiis possimus. Alias assumenda at dignissimos ea eveniet inventore, magnam quod voluptatibus!</div>
+                <div class="exp-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet commodi cupiditate dolor doloremque eos et iste officiis possimus. Alias assumenda at dignissimos ea eveniet inventore, magnam quod voluptatibus!
+                </div>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer"><a id="gotop" href="#" title=""><i class="fas fa-long-arrow-alt-up"></i>TOP</a>
+    <footer class="footer"><a id="gotop" href="#" title=""><i class="fas fa-long-arrow-alt-up"></i><span>TOP</span></a>
       <div class="footer__wrapper">
         <div class="container">
           <div class="row">
@@ -148,36 +148,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
     <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.0.0/js/all.js" defer></script>
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
-    <script>
-      $(window).on('load', function () {
-          var $container = $('.portfolioContainer');
-          $container.isotope({
-              filter: '*',
-              animationOptions: {
-                  duration: 750,
-                  easing: 'linear',
-                  queue: false
-              }
-          });
-          $('.portfolioFilter-menu > li > a').click(function () {
-              console.log('e');
-      
-              $('.portfolioFilter-menu > li .current').removeClass('current');
-              $(this).addClass('current');
-              var selector = $(this).attr('data-filter');
-              $container.isotope({
-                  filter: selector,
-                  animationOptions: {
-                      duration: 750,
-                      easing: 'linear',
-                      queue: false
-                  }
-              });
-              return false;
-          });
-      
-      });
-    </script>
   </body>
 </html>
