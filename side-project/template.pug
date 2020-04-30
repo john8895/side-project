@@ -1,0 +1,55 @@
+extends ../include/_layout-inner
+//-###################
+
+//- 宣告
+//-###################
+block var
+    -fileRootPath = '../'
+    -var pageTitle = '口罩地圖'
+
+
+//- 專案簡介與特點
+//-###################
+block detail
+    p 文字
+        ol
+            li 文字
+
+
+//- 使用技術、關鍵字以及製作時間
+//-###################
+block info
+    ul
+        li 技術：Pug、SCSS、Javascript、AJAX
+        li 製作時間：2 個月
+        li
+            | 網址：
+            a(href='https://john8895.github.io/maskmap/',target='_blank',title='口罩地圖 Where My Mask?') https://john8895.github.io/maskmap/
+
+        li
+            | Github：
+            a(href='https://github.com/john8895/maskmap',target='_blank',title='口罩地圖 Where My Mask?') https://github.com/john8895/maskmap
+
+
+//- 專案相關圖片
+//-###################
+block images
+    -for (let i = 1; i <= 4; i++)
+        +project__image-item(`../img/side-project/maskmap/project-image-maskmap${i}.jpg`,'maskmap',pageTitle)
+
+
+//- 學習心得分享
+//-###################
+block exp-detail
+    p
+        | &emsp;&emsp;文字
+
+
+//- 參考資料
+//-###################
+block ref
+    ul
+        li
+            a(href='https://youtu.be/pUizu62dlnY', target='_blank') Leaflet + OpenStreetMap 地圖應用開發
+        li
+            a(href='https://leafletjs.com/', target='_blank') Leaflet
