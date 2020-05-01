@@ -49,7 +49,7 @@ block content
                                     li.filter-item
                                         a.waves-effect.waves-success(href='#', data-filter='.ajax') 資料串接
                                     li.filter-item
-                                        a.waves-effect.waves-success(href='#', data-filter='.web-tools') 網頁工具
+                                        a.waves-effect.waves-success(href='#', data-filter='.webTools') 網頁工具
                                     li.filter-item
                                         a.waves-effect.waves-success(href='#', data-filter='.ui') UX / UI
                                     li.filter-item
@@ -57,10 +57,11 @@ block content
                         .clearfix.mb-3
                         .port.portfolio-masonry.m-b-30
                             .portfolioContainer.row
-                                +index__product-filterItem('口罩地圖','img/sp__maskmap.jpg','side-project/maskmap.html','ajax ui')
+                                +index__product-filterItem('口罩供需地圖','img/sp__maskmap.jpg','side-project/maskmap.html','ajax')
                                 +index__product-filterItem('中西曆年號查詢對照表','img/sp__chinese-western-years-map.jpg','side-project/chinese-western-years-map.html','web-tools')
-                                +index__product-filterItem('訂便當系統','img/sp__chinese-western-years-map.jpg','side-project/order-meal-system.html','web-tools')
-                                -for (let i = 1; i <= 6; i++)
+                                +index__product-filterItem('訂便當系統','img/index__sp-order-meal-system.jpg','side-project/order-meal-system.html','webTools')
+                                +index__product-filterItem('祖先牌位內板格式化器','img/side-project/card-slot-print.jpg','side-project/card-slot-print.html','webTools')
+                                -for (let i = 1; i <= 1; i++)
                                     +index__product-filterItem('coming soon','img/sp__comingsoon.jpg','#','ajax ui')
 
         //-

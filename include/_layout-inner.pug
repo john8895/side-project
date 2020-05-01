@@ -2,6 +2,8 @@ extends ../include/_layout
 block var
     -fileRootPath = '../'
     -var pageTitle = '口罩地圖'
+    -var titleEN = 'maskmap'
+
 block head
     include ../include/_head-inner
 block content
@@ -19,7 +21,7 @@ block content
                                 li
                                     a(href='index.html') Home
                                 li
-                                    a(href='side-project-list.html') Side Project
+                                    a(href=fileRootPath+'index.html#index__sideProject') Side Project
                                 li=pageTitle
         section.page__section.sideProject__project
             .container
@@ -48,7 +50,7 @@ block content
                 .row.project-image-wrap
                     block images
                         -for (let i = 1; i <= 8; i++)
-                            +project__image-item('../img/255x193.png','images',pageTitle)
+                            +project__image-item(`../img/side-project/project-image-${i}.jpg`,titleEN,pageTitle)
                 .row
                     .col-sm-12
                         .project-experience
@@ -59,11 +61,16 @@ block content
                                     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid amet commodi cupiditate dolor doloremque eos et iste officiis possimus. Alias assumenda at dignissimos ea eveniet inventore, magnam quod voluptatibus!
                 .row
                     .col-sm-12
-                        .project-ref
-                            .projectRef-title 參考資料
-                            hr
-                            block ref
+                        block ref
+                            .project-ref
+                                .projectRef-title 參考資料
+                                hr
                                 ul
                                     li 參考網站 1
                                     li 參考網站 2
                                     li 參考網站 3
+                .row
+                    .col-sm-12
+                        a.btn.btn-dark.text-light.mt-5(href='javascript:history.back()')
+                            i.fas.fa-reply.mr-2
+                            | 回上一頁

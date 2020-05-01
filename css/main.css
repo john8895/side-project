@@ -516,7 +516,7 @@ ul.pagination-numbers {
   text-align: center;
   color: #343434;
   padding: 10px 0 30px;
-  font-size: 13px;
+  font-size: 15px;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -782,6 +782,10 @@ ul.pagination-numbers {
   list-style-type: circle;
   margin-left: 40px;
 }
+.sideProject__project .project-detail li {
+  font-size: 18px;
+  line-height: 1.7;
+}
 .sideProject__project .project-info ul {
   margin-left: 20px;
   margin-bottom: 30px;
@@ -801,7 +805,7 @@ ul.pagination-numbers {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
-  margin-right: 7px;
+  margin-right: 14px;
   color: #c3c3c3;
 }
 .sideProject__project .project-info ul li a {
@@ -818,6 +822,7 @@ ul.pagination-numbers {
   margin-top: 30px;
 }
 .sideProject__project .project-ref ul li {
+  font-size: 18px;
   padding-left: 20px;
   line-height: 1.85;
 }
@@ -831,7 +836,7 @@ ul.pagination-numbers {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
-  margin-right: 7px;
+  margin-right: 14px;
   color: #c3c3c3;
 }
 .sideProject__project .projectRef-title,

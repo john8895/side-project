@@ -1,73 +1,61 @@
-//-
-    extends ../include/_layout-inner
-    block var
-        -var pageTitle = '訂便當系統'
-    block pageTitle
-        =pageTitle
-extends ../include/_layout
+extends ../include/_layout-inner
+//-###################
+
+//- 宣告
+//-###################
 block var
     -fileRootPath = '../'
-block head
-    include ../include/_head-inner
-block content
-    main.page__main.page__sideproject__maskmap
-        section.breadcrumb-wrap
-            .container
-                .row
-                    .col-md-6
-                        h1.breadcrumb__pageTitle 訂便當系統
-                    // 麵包屑
-                    .col-md-6
-                        nav.jh-breadcrumb
-                            ol
-                                li
-                                    a(href='index.html') Home
-                                li
-                                    a(href='side-project-list.html') Side Project
-                                li 訂便當系統
-        section.page__section.sideProject__project
-            .container
-                .row
-                    .col-sm-12
-                        .project-title 訂便當系統
-                        hr
-                        .project-detail
-                            p
-                                | 辦公室幾乎每天都要訂便當，每次訂便當的時候大家都會遇到兩個問題：1.彙整訂餐 2.收錢 ，原本同事是用 LINE 分別告知自己要什麼，再由一個人去匯集這些資料，有一天，我發現這位同事居然是將群組上的餐點及價格資料，用紙筆一一抄寫下來，然後再逐一統計，我心想這也太沒有效率了吧！於是就萌生設計這個「訂便當系統」的想法。
-                            p
-                                | 功能很簡單，上傳菜單圖片（最大 5MB），輸入訂購人、餐點名及價格，接著系統會自動統計同名的餐點份數與總金額，這樣訂餐時就可以直接告知店家正確的數量與金額，不用擔心算錯或看錯，點選訂購項次，還可為該項目加上「已付款」的標記，不怕沒收到錢或忘記誰有付錢。
-                        .project-info
-                            ul
-                                li 技術：Javascript、Localstorage
-                                li 製作時間：1 個月
-                                li
-                                    | 網址：
-                                    a(href='https://john8895.github.io/order-meal-system/',target='_blank',title='訂便當系統') https://john8895.github.io/order-meal-system/
+    -var pageTitle = '訂便當系統'
+    -var titleEN = 'order-meal-system'
 
-                                li
-                                    | Github：
-                                    a(href='https://github.com/john8895/order-meal-system',target='_blank',title='訂便當系統') https://github.com/john8895/order-meal-system
 
-                .row.project-image-wrap
-                    -for(let i=1;i<=8;i++)
-                        +project__image-item('../img/255x193.png','')
-                .row
-                    .col-sm-12
-                        .project-experience
-                            .projectExp-title 學習心得
-                            hr
-                            .exp-detail
-                                p
-                                    | 會設計這個程式，主因是看到抽空幫大家訂便當的同事，時常在彙整餐點及計算便當錢的過程中傷透腦筋，所以我心想：「如果有一個訂便當系統該有多好？」於是利用當時所會的技術，以瀏覽器的 Localstorage 作為儲存空間，將資料轉換為 String 以當天日期為 ID 存入，並加入可上傳圖片、統計相同餐點份數的功能，後續又因為同事實際的需求，又增加了可記錄已付款的標記。
-                                p
-                                    | 這個版本是採瀏覽器的 Localstorage 作為儲存空間，所以資料只能存在自己的瀏覽器上，原本想利用 JS 存取檔案系統，但發現有些安全性的限制無法克服，所以後續想改以 PHP 的方式改版，讓每個人都能在自己的電腦操作，同步修改資料，如果可以做到這樣，這個訂便當系統一定會更好用！
-                //-
-                    .row
-                        .col-sm-12
-                            .project-ref
-                                .projectRef-title 參考資料
-                                hr
-                                ul
-                                    li 參考網站 1
-                                    li 參考網站 2
-                                    li 參考網站 3
+//- 專案簡介與特點
+//-###################
+block detail
+    p
+        | &emsp;&emsp;辦公室幾乎每天都要訂便當，每次訂便當的時候大家都會遇到兩個問題：1.彙整訂餐 2.收錢 ，原本同事是用 LINE 分別告知自己要什麼，再由一個人去匯集這些資料，有一天，我發現這位同事居然是將群組上的餐點及價格資料，用紙筆一一抄寫下來，然後再逐一統計，我心想這也太沒有效率了吧！於是就萌生設計這個「訂便當系統」的想法。
+    p
+        | &emsp;&emsp;功能很簡單，上傳菜單圖片（最大 5MB），輸入訂購人、餐點名及價格，接著系統會自動統計同名的餐點份數與總金額，這樣訂餐時就可以直接告知店家正確的數量與金額，不用擔心算錯或看錯，點選訂購項次，還可為該項目加上「已付款」的標記，不怕沒收到錢或忘記誰有付錢。
+
+
+//- 使用技術、關鍵字以及製作時間
+//-###################
+block info
+    ul
+        li 技術：Javascript、Localstorage
+        li 製作時間：3 週下班時間與假日
+        li
+            | 網址：
+            a(href='https://john8895.github.io/order-meal-system/',target='_blank',title='訂便當系統') https://john8895.github.io/order-meal-system/
+        li
+            | Github：
+            a(href='https://github.com/john8895/order-meal-system',target='_blank',title='訂便當系統') https://github.com/john8895/order-meal-system
+
+
+//- 專案相關圖片
+//-###################
+block images
+    -for (let i = 1; i <= 5; i++)
+        +project__image-item(`../img/side-project/order-meal-system/project-image-order-meal-${i}.jpg`,titleEN,pageTitle)
+
+
+//- 學習心得分享
+//-###################
+block exp-detail
+    p
+        | &emsp;&emsp;會設計這個程式，主因是看到抽空幫大家訂便當的同事，時常在彙整餐點及計算便當錢的過程中傷透腦筋，所以我心想：「如果有一個訂便當系統該有多好？」於是利用當時所會的技術，以瀏覽器的 Localstorage 作為儲存空間，將資料轉換為 String 以當天日期為 ID 存入，並加入可上傳圖片、統計相同餐點份數的功能，後續又因為同事實際的需求，又增加了可記錄已付款的標記。
+    p
+        | &emsp;&emsp;這個版本是採瀏覽器的 Localstorage 作為儲存空間，所以資料只能存在自己的瀏覽器上，原本想利用 JS 存取檔案系統，但發現有些安全性的限制無法克服，所以後續想改以 PHP 的方式改版，讓每個人都能在自己的電腦操作，同步修改資料，如果可以做到這樣，這個訂便當系統一定會更好用！
+
+
+//- 參考資料
+//-###################
+block ref
+    //-
+        .project-ref
+            .projectRef-title 參考資料
+            hr
+            ul
+                li 參考網站 1
+                li 參考網站 2
+                li 參考網站 3

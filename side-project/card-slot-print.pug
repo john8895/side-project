@@ -5,8 +5,8 @@ extends ../include/_layout-inner
 //-###################
 block var
     -fileRootPath = '../'
-    -var pageTitle = '口罩地圖'
-    -var titleEN = 'order'
+    -var pageTitle = '祖先牌位內板格式化器'
+    -var titleEN = 'card-slot-print'
 
 
 //- 專案簡介與特點
@@ -25,18 +25,18 @@ block info
         li 製作時間：2 個月
         li
             | 網址：
-            a(href='https://john8895.github.io/maskmap/',target='_blank',title=pageTitle) https://john8895.github.io/maskmap/
+            a(href='https://john8895.github.io/card-slot-print/',target='_blank',title=pageTitle) https://john8895.github.io/card-slot-print/
 
         li
             | Github：
-            a(href='https://github.com/john8895/maskmap',target='_blank',title=pageTitle) https://github.com/john8895/maskmap
+            a(href='https://github.com/john8895/card-slot-print',target='_blank',title=pageTitle) https://github.com/john8895/card-slot-print
 
 
 //- 專案相關圖片
 //-###################
 block images
-    -for (let i = 1; i <= 4; i++)
-        +project__image-item(`../img/side-project/project-image-${i}.jpg`,titleEN,pageTitle)
+    -for (let i = 1; i <= 3; i++)
+        +project__image-item(`../img/side-project/card-slot-print/card-slot-print-${i}.jpg`,titleEN,pageTitle)
 
 
 //- 學習心得分享
