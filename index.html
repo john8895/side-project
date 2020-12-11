@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- 只有首頁需要載入-->
+    <!--link(rel='stylesheet',href='css/style.css')-->
+    <!-- 全站共用-->
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page__index">
       <div class="navbar__wrapper navbar-inner sticky-menu">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-dark"><a class="navbar__brand navbar-brand" href="index.html">
-              <div class="brand text-uppercase"><i class="fab fa-github-alt fa-lg mr-2"></i><span class="brand-text">TaiwanJohn</span></div></a>
+              <div class="brand text-uppercase"><span class="brand-text">TaiwanJohn</span></div></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
@@ -28,7 +31,19 @@
         </div>
       </div>
     </header>
-    <main class="page__index">
+    <main class="page__index" id="app">
+      <section class="index-slide">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(images/banner1.jpg)"></div>
+            <div class="swiper-slide" style="background-image: url(images/banner1.jpg)"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
       <section class="index__section slide">
         <div class="banner__slide__wrap">
           <div class="banner__img"></div>
@@ -38,6 +53,7 @@
               <div class="subTitle">陳政翰〔阿翰〕的部落格</div>
               <div class="title">Welcome to TaiwanJohn blog</div>
               <p>台灣匠 (Taiwan John)是一位多才多藝的電腦工程師、設計師及兼職作家，同時也是一個好老公及好爸爸。</p>
+              <p>{{ message }}</p>
               <div class="banner__btn"><a class="btn btn-sm btn-warning animate__innerLink" href="index.html#index__sideProject">Side Project</a></div>
             </div>
           </div>
@@ -52,7 +68,7 @@
               <h3 class="index__section-title index__ab-title mb-2">About Me</h3>
               <p class="description">我是前端工程師，會平面設計也會架 Server 寫程式，同時我還是一名兼職作家，正式出版 2 本書，投身資訊職場十五年，大家都很難想像只有高職農科畢業的我，是如何透過網路自學走到這一步？</p><a class="btn" href="ab.html" title="瞭解更多"><i class="fas fa-long-arrow-alt-right mr-2"></i>瞭解更多</a>
             </div>
-            <div class="col-sm-6"><img class="index__ab-image" src="img/index__ab.jpg" alt=""></div>
+            <div class="col-sm-6"><img class="index__ab-image" src="images/index__ab.jpg" alt=""></div>
           </div>
         </div>
       </section>
@@ -87,7 +103,7 @@
                 <div class="portfolioContainer row">
                   <div class="col-lg-3 ajax">
                     <article class="index__sideProjectBox">
-                      <div class="sideProject-img"><img class="img-fluid" src="img/sp__maskmap.jpg" alt="口罩供需地圖"/><a href="side-project/maskmap.html" title="口罩供需地圖">
+                      <div class="sideProject-img"><img class="img-fluid" src="images/sp__maskmap.jpg" alt="口罩供需地圖"/><a href="side-project/maskmap.html" title="口罩供需地圖">
                           <div class="sideProject__meta">
                             <div class="sideProject__meta-title">
                               <div class="btn btn-info btn-pill">賞閱作品</div>
@@ -98,7 +114,7 @@
                   </div>
                   <div class="col-lg-3 web-tools">
                     <article class="index__sideProjectBox">
-                      <div class="sideProject-img"><img class="img-fluid" src="img/sp__chinese-western-years-map.jpg" alt="中西曆年號查詢對照表"/><a href="side-project/chinese-western-years-map.html" title="中西曆年號查詢對照表">
+                      <div class="sideProject-img"><img class="img-fluid" src="images/sp__chinese-western-years-map.jpg" alt="中西曆年號查詢對照表"/><a href="side-project/chinese-western-years-map.html" title="中西曆年號查詢對照表">
                           <div class="sideProject__meta">
                             <div class="sideProject__meta-title">
                               <div class="btn btn-info btn-pill">賞閱作品</div>
@@ -109,7 +125,7 @@
                   </div>
                   <div class="col-lg-3 webTools">
                     <article class="index__sideProjectBox">
-                      <div class="sideProject-img"><img class="img-fluid" src="img/index__sp-order-meal-system.jpg" alt="訂便當系統"/><a href="side-project/order-meal-system.html" title="訂便當系統">
+                      <div class="sideProject-img"><img class="img-fluid" src="images/index__sp-order-meal-system.jpg" alt="訂便當系統"/><a href="side-project/order-meal-system.html" title="訂便當系統">
                           <div class="sideProject__meta">
                             <div class="sideProject__meta-title">
                               <div class="btn btn-info btn-pill">賞閱作品</div>
@@ -120,7 +136,7 @@
                   </div>
                   <div class="col-lg-3 webTools">
                     <article class="index__sideProjectBox">
-                      <div class="sideProject-img"><img class="img-fluid" src="img/side-project/card-slot-print.jpg" alt="祖先牌位內板格式化器"/><a href="side-project/card-slot-print.html" title="祖先牌位內板格式化器">
+                      <div class="sideProject-img"><img class="img-fluid" src="images/side-project/card-slot-print.jpg" alt="祖先牌位內板格式化器"/><a href="side-project/card-slot-print.html" title="祖先牌位內板格式化器">
                           <div class="sideProject__meta">
                             <div class="sideProject__meta-title">
                               <div class="btn btn-info btn-pill">賞閱作品</div>
@@ -131,7 +147,7 @@
                   </div>
                   <div class="col-lg-3 ajax ui">
                     <article class="index__sideProjectBox">
-                      <div class="sideProject-img"><img class="img-fluid" src="img/sp__comingsoon.jpg" alt="coming soon"/><a href="#" title="coming soon">
+                      <div class="sideProject-img"><img class="img-fluid" src="images/sp__comingsoon.jpg" alt="coming soon"/><a href="#" title="coming soon">
                           <div class="sideProject__meta">
                             <div class="sideProject__meta-title">
                               <div class="btn btn-info btn-pill">賞閱作品</div>
@@ -153,7 +169,7 @@
               <h3>想要更瞭解我一點</h3>
               <h1>再花你幾分鐘，往下閱讀…</h1>
               <p class="description">我的座右銘是：在有限的時間裡，做最大的努力。</p>
-              <div class="scrollIcon"><img src="img/mouse_roll.png" alt=""></div>
+              <div class="scrollIcon"><img src="images/mouse_roll.png" alt=""></div>
             </div>
           </div>
         </div>
@@ -378,8 +394,14 @@
     </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
     <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.0.0/js/all.js" defer></script>
-    <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <!-- 只有首頁需要載入-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- 全站共用-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!--script(src='https://cdn.jsdelivr.net/npm/vue@2.6.12')-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script type="text/javascript" src="js/all.js"></script>
   </body>
 </html>

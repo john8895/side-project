@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+ol, ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Microsoft JhengHei";
+    color: #3b3d42;
+}
+
+a {
+    color: #2147b1;
+
+    &:hover {
+        color: #1e409f;
+        text-decoration: none;
+    }
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}

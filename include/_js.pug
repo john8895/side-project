@@ -1,6 +1,17 @@
+//- 內含 bs jq 要放最前面
 script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js')
 //- 一次載入所有的圖示
 script(type='text/javascript', src='https://use.fontawesome.com/releases/v5.0.0/js/all.js', defer)
-script(type='text/javascript', src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js')
 script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js')
-script(type='text/javascript', src=fileRootPath+'js/main.js')
+
+// 只有首頁需要載入
+-if(module === 'index')
+    script(src='https://unpkg.com/swiper/swiper-bundle.js')
+    script(type='text/javascript', src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js')
+
+// 全站共用
+script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+//script(src='https://cdn.jsdelivr.net/npm/vue@2.6.12')
+
+script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js')
+script(type='text/javascript', src=fileRootPath+'js/all.js')

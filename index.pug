@@ -1,8 +1,23 @@
 extends include/_layout
 block var
+    -module = 'index'
     -fileRootPath = ''
 block content
-    main.page__index
+    main#app.page__index
+
+        section.index-slide
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide(style='background-image: url(images/banner1.jpg)')
+                    .swiper-slide(style='background-image: url(images/banner1.jpg)')
+                .swiper-pagination
+                .swiper-button-prev
+                .swiper-button-next
+                .swiper-scrollbar
+
+
+        //- ===============================================
+        //-匠這個字在日文的意思是指，對自己產品要求細節、追求完美與極致的精神，無論後來的選擇為何，莫忘初衷堅持去做正確的事，成就自己也造福社會。
         section.index__section.slide
             .banner__slide__wrap
                 .banner__img(style='')
@@ -14,9 +29,11 @@ block content
                         .title Welcome to TaiwanJohn blog
                         p
                             | 台灣匠 (Taiwan John)是一位多才多藝的電腦工程師、設計師及兼職作家，同時也是一個好老公及好爸爸。
+                        p {{ message }}
                         .banner__btn
                             a.btn.btn-sm.btn-warning.animate__innerLink(href='index.html#index__sideProject') Side Project
                 //img(src='http://fakeimg.pl/1920x800',alt='')
+        //- ===============================================
         section.index__section.index__ab
             .container
                 .row
@@ -29,7 +46,8 @@ block content
                             i.fas.fa-long-arrow-alt-right.mr-2
                             | 瞭解更多
                     .col-sm-6
-                        img.index__ab-image(src='img/index__ab.jpg',alt='')
+                        img.index__ab-image(src='images/index__ab.jpg',alt='')
+        //- ===============================================
         section.index__section.sideProject
             .sideproject__wrapper
                 .container
@@ -57,14 +75,14 @@ block content
                         .clearfix.mb-3
                         .port.portfolio-masonry.m-b-30
                             .portfolioContainer.row
-                                +index__product-filterItem('口罩供需地圖','img/sp__maskmap.jpg','side-project/maskmap.html','ajax')
-                                +index__product-filterItem('中西曆年號查詢對照表','img/sp__chinese-western-years-map.jpg','side-project/chinese-western-years-map.html','web-tools')
-                                +index__product-filterItem('訂便當系統','img/index__sp-order-meal-system.jpg','side-project/order-meal-system.html','webTools')
-                                +index__product-filterItem('祖先牌位內板格式化器','img/side-project/card-slot-print.jpg','side-project/card-slot-print.html','webTools')
+                                +index__product-filterItem('口罩供需地圖','images/sp__maskmap.jpg','side-project/maskmap.html','ajax')
+                                +index__product-filterItem('中西曆年號查詢對照表','images/sp__chinese-western-years-map.jpg','side-project/chinese-western-years-map.html','web-tools')
+                                +index__product-filterItem('訂便當系統','images/index__sp-order-meal-system.jpg','side-project/order-meal-system.html','webTools')
+                                +index__product-filterItem('祖先牌位內板格式化器','images/side-project/card-slot-print.jpg','side-project/card-slot-print.html','webTools')
                                 -for (let i = 1; i <= 1; i++)
-                                    +index__product-filterItem('coming soon','img/sp__comingsoon.jpg','#','ajax ui')
+                                    +index__product-filterItem('coming soon','images/sp__comingsoon.jpg','#','ajax ui')
 
-        //-
+        //- ===============================================
         section.index__section.index__bottomHeadLine.index__headLine
             .container
                 .row
@@ -73,7 +91,7 @@ block content
                         h1 再花你幾分鐘，往下閱讀…
                         p.description 我的座右銘是：在有限的時間裡，做最大的努力。
                         .scrollIcon
-                            img(src='img/mouse_roll.png',alt='')
+                            img(src='images/mouse_roll.png',alt='')
         //- 履歷
         section.index__section.index__resume
             .container
